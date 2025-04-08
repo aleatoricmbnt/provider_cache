@@ -1,9 +1,5 @@
 terraform {
   required_providers {
-    scalr-prod-2 = {
-      source  = "registry.scalr.io/scalr/scalr"
-      version = "2.5.0"
-    }
     scalr-prod-3 = {
       source  = "registry.scalr.io/scalr/scalr"
       version = "3.0.0"
@@ -12,14 +8,6 @@ terraform {
       source  = "registry.main.scalr.dev/scalr/scalr"
       version = "1.0.0-rc-master"
     }
-  }
-}
-
-
-module "scalr_prod_module_2_5_0" {
-  source = "./scalr_prod_module_2_5_0"
-  providers = {
-    scalr = scalr-prod-2
   }
 }
 
