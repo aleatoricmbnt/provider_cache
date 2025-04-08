@@ -8,11 +8,11 @@ terraform {
     #   source  = "registry.scalr.io/scalr/scalr"
     #   version = "3.0.0"
     # }
-  #   scalr-stg-master = {
-  #     source  = "registry.main.scalr.dev/scalr/scalr"
-  #     version = "1.0.0-rc-master"
-  #   }
-  # }
+    # scalr-stg-master = {
+    #   source  = "registry.main.scalr.dev/scalr/scalr"
+    #   version = "1.0.0-rc-master"
+    # }
+  }
 }
 
 
