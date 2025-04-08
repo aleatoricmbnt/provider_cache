@@ -11,5 +11,5 @@ data "scalr_current_account" "account" {}
 
 resource "scalr_environment" "test" {
   name       = "test-env"
-  account_id = data.scalr_current_account.id
+  account_id = data.scalr_current_account.account.id
 }

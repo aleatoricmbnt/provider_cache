@@ -11,5 +11,5 @@ data "scalr_current_account" "account" {}
 
 resource "scalr_agent_pool" "default" {
   name       = "default-pool"
-  account_id = data.scalr_current_account.id
+  account_id = data.scalr_current_account.account.id
 }
