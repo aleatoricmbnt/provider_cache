@@ -81,3 +81,15 @@ resource "terraform_data" "show_created_thingies" {
 # output "hashicups_coffee_name" {
 #   value = hashicups_order.edu.name
 # }
+
+### RANDOM
+
+resource "random_pet" "name" {
+  length = 3
+}
+
+### NULL
+
+resource "null_resource" "name" {
+  
+}
