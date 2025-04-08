@@ -49,17 +49,35 @@ resource "archive_file" "test" {
 
 ### BUILTIN
 
-resource "terraform_data" "show_created_thingies" {
+resource "terraform_data" "show_foo_bar" {
   triggers_replace = [ local_file.foo, tls_private_key.ecdsa-p384-example, template_dir.config, archive_file.test ]
   provisioner "local-exec" {
-    command = <<EOT
-      cat ${path.module}/foo.bar && \
-      ls -la ${path.cwd}/instance_config/ && \
-      cat ${path.cwd}/instance_config/* && \
-      ls -la ${path.module}/files/
-    EOT
+    command = "cat ${path.module}/foo.bar"
   }
 }
+
+resource "terraform_data" "list_files_in_instance_config" {
+  triggers_replace = [ local_file.foo, tls_private_key.ecdsa-p384-example, template_dir.config, archive_file.test ]
+  provisioner "local-exec" {
+    command = "ls -la ${path.cwd}/instance_config/"
+  }
+}
+
+
+resource "terraform_data" "show_file_in_instance_config" {
+  triggers_replace = [ local_file.foo, tls_private_key.ecdsa-p384-example, template_dir.config, archive_file.test ]
+  provisioner "local-exec" {
+    command = "cat ${path.cwd}/instance_config/*"
+  }
+}
+
+resource "terraform_data" "list_files_in_files" {
+  triggers_replace = [ local_file.foo, tls_private_key.ecdsa-p384-example, template_dir.config, archive_file.test ]
+  provisioner "local-exec" {
+    command = "ls -la ${path.module}/files/"
+  }
+}
+
 
 ### HASHICUPS
 
