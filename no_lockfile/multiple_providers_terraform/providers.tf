@@ -28,10 +28,10 @@ terraform {
       source = "hashicorp/external"
       version = "2.3.4"
     }
-    hashicups = {
-      source = "hashicorp/hashicups"
-      version = "0.3.1"
-    }
+    # hashicups = {
+    #   source = "hashicorp/hashicups"
+    #   version = "0.3.1"
+    # }
     aws = {
       source = "hashicorp/aws"
       version = "5.94.1"

@@ -63,21 +63,21 @@ resource "terraform_data" "show_created_thingies" {
 
 ### HASHICUPS
 
-resource "hashicups_order" "edu" {
-  items {
-    coffee {
-      id = 3
-    }
-    quantity = 2
-  }
-  items {
-    coffee {
-      id = 2
-    }
-    quantity = 2
-  }
-}
+# resource "hashicups_order" "edu" {
+#   items {
+#     coffee {
+#       id = 3
+#     }
+#     quantity = 2
+#   }
+#   items {
+#     coffee {
+#       id = 2
+#     }
+#     quantity = 2
+#   }
+# }
 
-output "hashicups_coffee_name" {
-  value = hashicups_order.edu.name
-}
+# output "hashicups_coffee_name" {
+#   value = hashicups_order.edu.name
+# }
