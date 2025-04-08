@@ -7,10 +7,10 @@ terraform {
   }
 }
 
-# data "scalr_current_account" "account" {}
+data "scalr_current_account" "account" {}
 
 resource "scalr_iam_team" "example" {
   name        = "dev"
   description = "Developers"
-  account_id  = "acc-v0op42072e3o12dlk" # data.scalr_current_account.account.id
+  account_id  = data.scalr_current_account.account.id
 }
