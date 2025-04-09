@@ -24,10 +24,10 @@ terraform {
       source = "atlassian/atlassian-operations"
       version = "1.0.1"
     }
-    auth0 = {
-      source = "auth0/auth0"
-      version = "1.16.0"
-    }
+    # auth0 = {
+    #   source = "auth0/auth0"
+    #   version = "1.16.0"
+    # }
     harbor = {
       source = "bestseller/harbor"
       version = "3.10.20"
