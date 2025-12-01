@@ -5,7 +5,7 @@ provider "registry.terraform.io/aristanetworks/cloudeos" {
   version     = "1.2.2"
   constraints = "1.2.2"
   hashes = [
-    "h1:MI2ebzpyXzslyVD2pXzidDgDB+f12YtN9F1xe5903sU=",
+    "h1:MI2ebzpyXzslyVD2pXzidDgDB+f12YtN9F1xe5903sU=#",
     "zh:22714d0098aa654f3016ad6f2f800566f39b50855216daab3678df7464b73f74",
     "zh:4c51cb1b1a532dfe1482f63517c4fc81c452a0a413b0d5d1d704e19558e31db2",
     "zh:542dfdca5923857356ca85f10f2a3038c88424a7f2e0b5bb5c4877271bd09264",
