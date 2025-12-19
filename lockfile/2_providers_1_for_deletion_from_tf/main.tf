@@ -4,10 +4,10 @@ terraform {
       source = "hashicorp/google"
       version = "7.14.1"
     }
-    scalr = {
-      source = "Scalr/scalr"
-      version = "3.11.0"
-    }
+    # scalr = {
+    #   source = "Scalr/scalr"
+    #   version = "3.11.0"
+    # }
   }
 }
 
@@ -28,6 +28,6 @@ variable "google_project_id" {
   default = null
 }
 
-resource "scalr_tag" "example" {
-  name       = "mshytse-tag-name"
-}
+# resource "scalr_tag" "example" {
+#   name       = "mshytse-tag-name"
+# }
